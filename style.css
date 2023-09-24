@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  /* (paragraphs) */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --Very-light-gray : hsl(0, 0%, 95%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 15px;
+}
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--Very-light-gray);
+}
+.content {
+  max-width: 68.5rem;
+  display: flex;
+  border-radius: 0.8em;
+  overflow: hidden;
+} 
+.card {
+  padding: 3.5em;
+}
+
+.card:nth-child(1){
+  background-color: var(--Bright-orange);
+  color: var(--Bright-orange);
+}
+.card:nth-child(2){
+  background-color: var(--Dark-cyan);
+  color: var(--Dark-cyan);
+}
+.card:nth-child(3){
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-dark-cyan);
+}
+.card .title {
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  letter-spacing: 0.05em;
+  font-size: 2.5em;
+  margin-top: 0.8em;
+  color: var(--Very-light-gray);
+}
+.description {
+  color: var(--Transparent-white);
+  line-height: 1.6em;
+  padding-right: 2em;
+  font-size: 1em;
+  text-align: left;
+  margin-top: 2em;
+}
+.btn {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.1em;
+  background-color: var(--Very-light-gray);
+  border-color: transparent;
+  border-radius: 3em;
+  padding: 1rem 2rem;
+  color: inherit;
+  margin-top: 6em;  
+  cursor: pointer; 
+  transition: all 0.2s;
+}
+.btn:hover {  
+  background-color: transparent;
+  color: var(--Very-light-gray);
+  border: 2px solid var(--Very-light-gray);
+}
+@media only screen and (max-width: 768px ) {
+  .content {
+    flex-direction: column;   
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+  body {
+    margin: 6em 0;
+  }
+  .content {
+    flex-direction: column;   
+  }
+  .btn {
+    margin-top: 1.65em;
+  }
+}
